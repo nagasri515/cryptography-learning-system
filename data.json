@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1775481564872,
+    "algorithm": "caesar",
+    "input": "HELLO",
+    "output": "LIPPS",
+    "time": "06/04/2026, 18:49:24"
+  },
+  {
+    "id": 1775481851668,
+    "algorithm": "des",
+    "input": "HELLO",
+    "output": "e3Z/f3w=",
+    "time": "06/04/2026, 18:54:11"
+  }
+]
