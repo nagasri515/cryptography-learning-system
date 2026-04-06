@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SecureNet Crypto System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<div class="sidebar">
+<h2>🔐 SecureNet</h2>
+<ul>
+<li onclick="showSection('tool')">Tool</li>
+<li onclick="showSection('flow')">Encryption Flow</li>
+<li onclick="showSection('decflow')">Decryption Flow</li>
+<li onclick="showSection('file')">File Encryption</li>
+<li onclick="showSection('history')">History</li>
+<li onclick="showSection('about')">About</li>
+</ul>
+</div>
+
+<div class="main">
+<h1>Cryptography & Network Security Learning System</h1>
+
+<button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+<div id="tool" class="section active">
+<h2>Encryption / Decryption Tool</h2>
+
+<select id="algo">
+<option value="caesar">Caesar</option>
+<option value="substitution">Substitution</option>
+<option value="aes">AES</option>
+<option value="des">DES</option>
+<option value="hill">Hill</option>
+<option value="diffie">Diffie-Hellman</option>
+<option value="blowfish">Blowfish</option>
+</select>
+
+<input id="text" placeholder="Enter Text">
+<input id="key" placeholder="Key">
+
+<button onclick="encrypt()">Encrypt</button>
+<button onclick="decrypt()">Decrypt</button>
+<button onclick="downloadResult()">Download</button>
+
+<pre id="result"></pre>
+</div>
+
+<div id="flow" class="section">
+<h2>Encryption Flow</h2>
+<div class="flow">
+<div class="box">Plain Text</div>
+<div class="arrow">↓</div>
+<div class="box">Algorithm</div>
+<div class="arrow">↓</div>
+<div class="box">Key</div>
+<div class="arrow">↓</div>
+<div class="box">Cipher Text</div>
+</div>
+</div>
+
+<div id="decflow" class="section">
+<h2>Decryption Flow</h2>
+<div class="flow">
+<div class="box">Cipher Text</div>
+<div class="arrow">↓</div>
+<div class="box">Algorithm</div>
+<div class="arrow">↓</div>
+<div class="box">Key</div>
+<div class="arrow">↓</div>
+<div class="box">Plain Text</div>
+</div>
+</div>
+
+<div id="file" class="section">
+<h2>File Encryption</h2>
+<input type="file" id="fileInput">
+<button onclick="encryptFile()">Encrypt File</button>
+<pre id="fileResult"></pre>
+</div>
+
+<div id="history" class="section">
+<h2>History</h2>
+<button onclick="loadHistory()">Load</button>
+<button onclick="clearHistory()">Clear</button>
+<button onclick="downloadHistory()">Export</button>
+
+<table border="1" id="historyTable">
+<thead>
+<tr>
+<th>ID</th>
+<th>Algorithm</th>
+<th>Input</th>
+<th>Output</th>
+<th>Time</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+
+<div id="about" class="section">
+<h2>About</h2>
+<p>This project demonstrates major cryptographic algorithms.</p>
+</div>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
